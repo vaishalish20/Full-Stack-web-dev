@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    padding: 5px;
+    border-radius: 15px;
+    border: 2px solid rgb(199, 191, 191);
+    margin-top:5px;
+    margin-bottom: 10px;
+}
+
+.button-class{
+    margin-top:10px;
+
+}
+button {
+    padding: 6px;
+    margin-left: 15px;
+    border: 2px solid rgb(240, 234, 234);
+    /* background-color: rgb(252, 249, 249); */
+}
