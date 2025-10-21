@@ -1,6 +1,9 @@
+/* adding divs, classes to html and adjusting css accordingly */
+/* adding margins*/
 .logo-img{
     display: block;
     width: 300px;
+    margin-bottom: 20px;
 }
 .search-box{
     display:block;
@@ -9,4 +12,4 @@
 .container{
     margin-top: 100px;
 }
-/* adding divs, classes to html and adjusting css accordingly */
+
