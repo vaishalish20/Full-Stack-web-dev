@@ -1,0 +1,10 @@
+/* font weight can be lighter normal or bold */
+/* text align can be left, right or center */
+body{
+    background: skyblue; 
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
