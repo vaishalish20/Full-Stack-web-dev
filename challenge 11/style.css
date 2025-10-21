@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+.red{
+    background: rgb(240, 98, 98);
+    height: 100px;
+    /* margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 100px; */
+    
+}
+.blue{
+    background: rgb(90, 90, 228);
+    height: 100px;
+    /* margin-top: 20px;
+    margin-bottom: 20px;*/
+} 
+.green{
+    background: rgb(75, 211, 75);
+    height: 100px;
+}
+/* Note: If margin-bottom of red is 15px and margin-top of blue is 20px then it will result in margin of 20px between red and blue div. The maring will not added up.*/
