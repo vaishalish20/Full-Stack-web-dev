@@ -1,15 +1,23 @@
 /* adding divs, classes to html and adjusting css accordingly */
-/* adding margins*/
-.logo-img{
+/* adding margins and making elements to center*/
+.logo-img {
     display: block;
     width: 300px;
     margin-bottom: 20px;
-}
-.search-box{
-    display:block;
-    width: 400px;
-}
-.container{
-    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
+.search-box {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.container {
+    margin-top: 100px;
+
+}
