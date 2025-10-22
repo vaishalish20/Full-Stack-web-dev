@@ -6,6 +6,17 @@
     margin-left: auto;
     margin-right: auto;
 
-    padding-top:100px;
-    padding-right: 120px;
+    /* border: 8px dashed white;
+    border-radius: 30px; */
+    padding:20px;
+    /* part of challenge: padding */
+    /* padding-top:100px;
+    padding-right: 120px; */
+
+    /* part of challenge: border */
+    /* border:5px solid #222222;
+    border-radius: 20px; */
 }
+
+/* learning about padding */
+/* learning about border */
