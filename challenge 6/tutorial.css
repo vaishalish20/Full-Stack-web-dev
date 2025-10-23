@@ -24,13 +24,16 @@
 
 .container {
     margin-top: 100px;
+    /* adding the text-align center, will make inline elements text to be in center */
+    text-align: center;
 
 }
 
 .gsearch-btn{
-    display: block;
+    /* no need these 3 properties, because are for making single element center */
+    /* display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
     margin-top: 30px;
     /* buttons already have width, so not necesary to add width */
 
