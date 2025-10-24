@@ -1,9 +1,10 @@
 body{
     margin:20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .main-image{
-    width:150px;
+    width:160px;
 
 }
 .card{
@@ -17,10 +18,21 @@ body{
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-    
+
     text-align: center;
+
+    /* adding the border and color */
+
+    /* border-bottom: 5px #d8cefe solid;*/
+    /* background: rgb(178, 201, 219); */
+    /* background: #ddebf8;  */
+
+    border-bottom: 7px #A8C5E2 solid;
+    background: #FFF3B0; 
+    color:#2b2839;
 }
 
-.blue-dotted-border{
+/* removed this blue border from everywhere */
+/* .blue-dotted-border{
       border: 1px dotted skyblue;
-}
+} */
