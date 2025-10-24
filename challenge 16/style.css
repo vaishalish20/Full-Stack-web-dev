@@ -11,6 +11,12 @@ body{
     /* border: 1px dotted skyblue; */
     padding:20px;
     display: flex;
+    justify-content: space-around;
+
+    /* giving width to the card and making it center */
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .blue-dotted-border{
