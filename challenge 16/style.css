@@ -1,9 +1,11 @@
 body{
     margin:20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* add your favourite font web safe fonts */
+    /* font-family: Tahoma,Verdana, sans-serif; */
+    font-family: Verdana,sans-serif;
 }
 
-.main-image{
+.main-image{ 
     width:160px;
 
 }
@@ -16,9 +18,11 @@ body{
 
     /* giving width to the card and making it center */
     width: 400px;
-    margin-left: auto;
-    margin-right: auto;
 
+    /* writing shorthand for margins */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
     text-align: center;
 
     /* adding the border and color */
@@ -26,10 +30,20 @@ body{
     /* border-bottom: 5px #d8cefe solid;*/
     /* background: rgb(178, 201, 219); */
     /* background: #ddebf8;  */
-
-    border-bottom: 7px #A8C5E2 solid;
+/* add your favourite color pallet */ 
+    border-bottom: 7px #f7abab solid;
     background: #FFF3B0; 
-    color:#2b2839;
+    color:#5e97cf;
+    /* add the personlized things */
+    border-radius: 15px;
+    /* box-shadow: offset-x offset-y blur-radius spread-radius color inset; */
+     box-shadow: 5px 10px 10px rgba(231, 93, 58, 0.2);
+}
+
+.card:hover {
+  background-color: #ddebf8;        /* soft pastel blue on hover */
+  color: #f58989;                   /* slightly darker blue for contrast */
+  border-bottom: 7px solid #f7abab; /* border stays the same */
 }
 
 /* removed this blue border from everywhere */
