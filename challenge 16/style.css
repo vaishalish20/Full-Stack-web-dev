@@ -7,6 +7,12 @@ body{
 
 }
 .card{
-    border: 5px dotted skyblue;
+    /* removed this border and created a utility class for the blur dotted border */
+    /* border: 1px dotted skyblue; */
     padding:20px;
+    display: flex;
+}
+
+.blue-dotted-border{
+      border: 1px dotted skyblue;
 }
