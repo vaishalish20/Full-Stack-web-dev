@@ -1,0 +1,19 @@
+
+body{
+    background: whitesmoke;
+    color: whitesmoke;
+    font-family: 'Rammetto One', cursive;
+}
+
+.ad{
+    /* margin: 0 auto; */
+    border: 7px solid #A3BC71;
+    background: #35654d;
+    text-align: center;
+
+}
+.cta{
+    border: 2px solid #A3BC71;
+    padding:5px 10px;
+    background: #8f4737;
+}
