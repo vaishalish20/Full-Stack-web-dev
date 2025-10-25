@@ -1,15 +1,24 @@
 /* setting space project and adding background image */
 
 
-body{
+body {
     background-image: url("images/universe.jpg");
     background-size: cover;
-    color:white;
+    color: white;
     text-align: center;
+     font-family: "Orbitron", sans-serif;
+
 }
 
-.btn{
+/* button does not inherit the font style from parent element if we want to do so then we can apply font family to body and add font-family inherit or simple add the same font family to btn class */
+.btn {
     padding: 8px 16px;
-    background-color: rgb(238, 236, 236);
-    border:none;
+    background: rgb(238, 236, 236);
+    border: none;
+    font-family: inherit;
+}
+/* challenge to add a span and class */
+
+.underline{
+    border-bottom: 4px solid white;
 }
