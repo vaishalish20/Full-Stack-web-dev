@@ -11,8 +11,23 @@
     align-items: center; */
 
     /* challene 3 */
-    justify-content: space-around;
-    align-items: start;
+    /* justify-content: space-around;
+    align-items: start; */
+
+    /* challenge 4 */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: start; */
+
+    /* challenge 5 */
+    /* flex-direction: column;
+    justify-content: space-between;
+    align-items: end; */
+
+    /* challenge 6 */
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 /* note: align item default value is stretch and if the height is not given then, each element will stretch out across y axis */
