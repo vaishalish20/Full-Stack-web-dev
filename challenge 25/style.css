@@ -8,23 +8,46 @@ body {
     font-family: "Happy Monkey", system-ui;
     font-weight: 400;
     font-style: normal;
+    /* removed the following from body and adding it to #header */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;  */
+}
 
+#header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
     text-shadow: 0px 0px 2px black;
 }
 
-#avatar {
+#bff-image {
     width: 150px;
     /* border: 1px solid #a2d2ff; */
     border: 5px solid #a2d2ff;
     border-radius: 50%;
 
 }
-h2,h4{
+
+/* replaced h2 and h4 with their id selectors */
+/* separating out these two h2 and h4 */
+#bday-age {
     background-color: #a2d2ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px 0 15px 0;
+}
+
+#bday-date {
+    margin: 0;
+    background-color: #a2d2ff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
