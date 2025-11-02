@@ -2,7 +2,8 @@ body {
     margin: 0;
     text-align: center;
     /* background: #f7abab; */
-    background: #f7abab;
+    /* background: #f7abab; */
+    background: linear-gradient(#f7abab,#a2d2ff);
     color: #ffffff;
 
     font-family: "Happy Monkey", system-ui;
@@ -31,8 +32,9 @@ p {
 #bff-image {
     width: 150px;
     /* border: 1px solid #a2d2ff; */
-    border: 5px solid #a2d2ff;
+    border: 5px solid white;
     border-radius: 50%;
+    background-color: #a2d2ff;
 
 }
 
@@ -58,6 +60,7 @@ p {
     border: 6px solid white;
     border-radius: 20px; */
     background-image: url("images/gift-cover.jpg");
+    /* background-image: url("images/gift-image-copy.jpg"); */
     background-size: cover;
     width: 400px;
     height: 400px;
@@ -78,24 +81,29 @@ p {
 /* adding hover effect */
 
 #gift-img-happy:hover {
-    background-image: url("images/happy.gif");
+    /* background-image: url("images/happy.gif"); */
+    background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTQyNDRudnZyZTkxemFidmE2eTY2eGdldGNpZGVrbmJ0a2NodmdtdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11sBLVxNs7v6WA/giphy.gif");
 
 }
 
 #gift-img-hot:hover{
-    background-image: url("images/hot.gif");
+    /* background-image: url("images/hot.gif"); */
+    background-image: url("https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Nm5qMjl1dGpnMHE1bmExZjZsNW9yNmI4ODlpY3Z2dnpicXdpeTR3cSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/FlWgXEtj5aM5G/giphy.gif");
 }
 #gift-img-genius:hover{
-    background-image: url("images/genius.gif");
+    /* background-image: url("images/genius.gif"); */
+    background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamJiN3l1amRuZWdrODI0azk1Mjl5OTdsOGN0ZTd0dm51d2phMXhrMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IVCPUwOSVnIMo/giphy.gif");
 }
 #gift-img-badass:hover{
-    background-image: url("images/badass.gif");
+    /* background-image: url("images/badass.gif"); */
+    background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDIwdmJrMmQ5aHJrYjRkMDA2cmdlNzUyZnp4bGpoZGppaGxocXZmYSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/mVJ5xyiYkC3Vm/giphy.gif");
 }
 #gift-img-cheers{
     height: 200px;
 }
 #gift-img-cheers:hover{
-    background-image:url("images/cheers.gif");
+    /* background-image:url("images/cheers.gif"); */
+    background-image:url("https://c.tenor.com/R2H5w83ycRUAAAAd/tenor.gif");
 }
 
 #footer{
