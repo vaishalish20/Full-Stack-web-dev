@@ -28,3 +28,15 @@
 // console.log(bonusPoint);
 
 // 50 + 50 = 100 - 75 = 25 + 45 = 70
+
+// steps to perform
+
+// 1. initalize a count as 0
+// 2. listen for clicks on the increment button
+// 3. increment the count variable when the button is clicked.
+// 4. change the count-el in the HTML to reflect the new count
+
+function increment(){
+    console.log("The button is clicked.");
+    
+}
