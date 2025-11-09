@@ -18,13 +18,13 @@
 // console.log(myDogAge);
 
 // challenge 3
-let bonusPoint = 50;
-console.log(bonusPoint);
-bonusPoint = bonusPoint + 50;
-console.log(bonusPoint);
-bonusPoint = bonusPoint - 75;
-console.log(bonusPoint);
-bonusPoint = bonusPoint + 45;
-console.log(bonusPoint);
+// let bonusPoint = 50;
+// console.log(bonusPoint);
+// bonusPoint = bonusPoint + 50;
+// console.log(bonusPoint);
+// bonusPoint = bonusPoint - 75;
+// console.log(bonusPoint);
+// bonusPoint = bonusPoint + 45;
+// console.log(bonusPoint);
 
 // 50 + 50 = 100 - 75 = 25 + 45 = 70
