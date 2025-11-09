@@ -11,3 +11,8 @@ function sumOfLaps(){
 }
 
 sumOfLaps()
+
+// Note: the global scope can be accessed from outside to inside of functions where as local variable can not be accessed from inside of a function to outside of a function.
+// Example:
+// Global variable: lap1, lap2 ,lap3
+// Local variable: sum
