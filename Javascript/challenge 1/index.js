@@ -19,11 +19,12 @@
 
 // challenge 3
 let bonusPoint = 50;
-bonusPoint = bonusPoint + 100;
 console.log(bonusPoint);
-bonusPoint = bonusPoint - 25;
+bonusPoint = bonusPoint + 50;
 console.log(bonusPoint);
-bonusPoint = bonusPoint + 70;
+bonusPoint = bonusPoint - 75;
+console.log(bonusPoint);
+bonusPoint = bonusPoint + 45;
 console.log(bonusPoint);
 
-// 50 + 100 = 150 - 25 = 125 + 70 = 195
+// 50 + 50 = 100 - 75 = 25 + 45 = 70
