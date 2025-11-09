@@ -42,12 +42,29 @@
 // }
 
 // solution:
-let countOnclick = 0;
+// let countOnclick = 0;
+
+// function increment(){
+//     console.log(countOnclick);
+//     countOnclick = countOnclick + 1;
+//     console.log(countOnclick);
+//     document.getElementById("count-el").innerHTML = countOnclick;
+
+// }
+
+// same solution but with countEl variable
+
+let count = 0;
+let countEl = document.getElementById("count-el");
 
 function increment(){
-    console.log(countOnclick);
-    countOnclick = countOnclick + 1;
-    console.log(countOnclick);
-    document.getElementById("count-el").innerHTML = countOnclick;
-
+    count = count + 1;
+    countEl.innerHTML = count;
 }
+
+// save function
+
+function save(){
+    console.log(count);
+}
+
