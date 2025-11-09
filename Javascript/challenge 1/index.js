@@ -36,7 +36,18 @@
 // 3. increment the count variable when the button is clicked.
 // 4. change the count-el in the HTML to reflect the new count
 
-function increment(){
-    console.log("The button is clicked.");
+// function increment(){
+//     console.log("The button is clicked.");
     
+// }
+
+// solution:
+let countOnclick = 0;
+
+function increment(){
+    console.log(countOnclick);
+    countOnclick = countOnclick + 1;
+    console.log(countOnclick);
+    document.getElementById("count-el").innerHTML = countOnclick;
+
 }
