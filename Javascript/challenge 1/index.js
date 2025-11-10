@@ -51,20 +51,34 @@
 //     document.getElementById("count-el").innerHTML = countOnclick;
 
 // }
-
+// ===========================================================
 // same solution but with countEl variable
+
+// challenge
+// creating variable for saveEl
 
 let count = 0;
 let countEl = document.getElementById("count-el");
+let saveEl = document.getElementById("save-el")
 
 function increment(){
-    count = count + 1;
-    countEl.innerHTML = count;
+    // add short hand here
+    // count = count + 1;
+    count +=1;
+    // countEl.innerHTML = count;
+    countEl.textContent = count;
 }
 
 // save function
 
 function save(){
-    console.log(count);
+    // console.log(count);
+     let countStr = count + " - ";
+    // saveEl.innerHTML += countStr
+    saveEl.textContent += countStr
+
+    count = 0;
+    countEl.textContent = 0
 }
 
+console.log("Let's count people on the subway!");
