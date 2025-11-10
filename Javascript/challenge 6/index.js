@@ -19,12 +19,16 @@
 
 // strings vs numbers
 
-console.log(4+5);  //9
-console.log("2" + "4");  //24
-console.log("5" +  1);   //51
-console.log(100 + "100"); //100100
+// console.log(4+5);  //9
+// console.log("2" + "4");  //24
+// console.log("5" +  1);   //51
+// console.log(100 + "100"); //100100
 
 
+// challenge 4
 
+let wish = "I'd love to see the show the Lion King."
+console.log(wish);
 
+// note: / is the escape
 
