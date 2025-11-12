@@ -11,3 +11,16 @@ let fullName = firstName + " " + lastName;
 console.log(fullName);
 
 
+//challenge-2(Concatenate two strings)
+
+let name= "Linda"
+let greeting="Hi there"
+
+// create a function that logs out "Hi there, Linda!" when called
+
+function greet(){
+    console.log(greeting + ", "+name+ "!");
+    
+}
+
+greet();
