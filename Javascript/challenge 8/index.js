@@ -60,3 +60,18 @@ console.log("My points: " + 5 + 9) // "My points: 59"
 // Note: the above is string + number = string so its 59 not 14
 console.log(2 + 2) // 4
 console.log("11" + "14") // "1114"
+
+// ==================================================================
+
+// challenge-5 (Rendering an error messages)
+
+// When the user clicks the purchase button, render out
+// "Something went wrong, please try again" in the paragraph
+// that has the id="error".
+
+let pEl=document.getElementById("error")
+// console.log(pEl);
+
+function errorMessage(){
+    pEl.textContent="Something went wrong, please try again";
+}
