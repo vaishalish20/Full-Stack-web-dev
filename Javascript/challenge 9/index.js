@@ -7,4 +7,13 @@ let secondCard = 2;
 
 let sum = firstCard + secondCard
 
-console.log(sum);
+// if else logic
+if (sum < 21){
+    console.log("Do you want to draw a card?");
+}else if(sum === 21)
+{
+    console.log("You win!");
+}else{
+    console.log("You are out of game.");
+    
+}
