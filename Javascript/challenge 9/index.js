@@ -47,6 +47,6 @@ if (sum <= 20) {
     isAlive = false
 }
 
-console.log(isAlive);
+// console.log(isAlive);
 console.log(message);
 
