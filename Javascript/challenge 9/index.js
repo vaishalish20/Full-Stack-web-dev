@@ -2,7 +2,7 @@
 // Set their values to a random number between 2-11
 
 let firstCard = 10;
-let secondCard = 22;
+let secondCard = 2;
 // 2. Create a variable, sum, and set it to the sum of the two cards.
 
 let sum = firstCard + secondCard;
@@ -30,13 +30,23 @@ let sum = firstCard + secondCard;
 
 let isAlive = true;
 
+// 1. Declare a variable called message and assign its value to an empty string
+// 2. Reassign the message variable to the string we're logging out
+// 3. Log it out!
+ let message = ""
+
 if (sum <= 20) {
-    console.log("Do you want to draw a new card? 🙂");
+    // console.log("Do you want to draw a new card? 🙂");
+    message = "Do you want to draw a new card? 🙂";
 } else if (sum === 21) {
-    console.log("Wohoo! You've got Blackjack! 🥳");
+    // console.log("Wohoo! You've got Blackjack! 🥳");
+    message = "Wohoo! You've got Blackjack! 🥳";
 } else {
-    console.log("You're out of the game! 😭");
+    // console.log("You're out of the game! 😭");
+    message = "You're out of the game! 😭";
     isAlive = false
 }
 
 console.log(isAlive);
+console.log(message);
+
