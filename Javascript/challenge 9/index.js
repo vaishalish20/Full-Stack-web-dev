@@ -35,6 +35,10 @@ let isAlive = true;
 // 3. Log it out!
  let message = ""
 
+
+ // 2. Create a startGame() function. Move the conditional
+// below (line 11-20) inside the body of the function.
+function startGame(){
 if (sum <= 20) {
     // console.log("Do you want to draw a new card? 🙂");
     message = "Do you want to draw a new card? 🙂";
@@ -46,7 +50,10 @@ if (sum <= 20) {
     message = "You're out of the game! 😭";
     isAlive = false
 }
-
 // console.log(isAlive);
 console.log(message);
+
+}
+
+
 
