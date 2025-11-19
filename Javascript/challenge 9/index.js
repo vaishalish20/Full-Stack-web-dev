@@ -38,6 +38,12 @@ let isAlive = true;
 
  // 2. Create a startGame() function. Move the conditional
 // below (line 11-20) inside the body of the function.
+
+
+// 1. Store the message-el paragraph in a variable called messageEl
+let messageEl=document.getElementById("message-el");
+
+// 2. Display the message in the messageEl using messageEl.textContent
 function startGame(){
 if (sum <= 20) {
     // console.log("Do you want to draw a new card? 🙂");
@@ -51,8 +57,8 @@ if (sum <= 20) {
     isAlive = false
 }
 // console.log(isAlive);
-console.log(message);
-
+// console.log(message);
+messageEl.textContent = message;
 }
 
 
