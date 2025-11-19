@@ -3,6 +3,8 @@
 
 let firstCard = 10;
 let secondCard = 1;
+
+let cards= [firstCard , secondCard]
 // 2. Create a variable, sum, and set it to the sum of the two cards.
 
 let sum = firstCard + secondCard;
@@ -61,7 +63,7 @@ function renderGame() {
         // console.log("Do you want to draw a new card? 🙂");
         message = "Do you want to draw a new card?";
         sumEl.textContent = "Sum: " + sum;
-        cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
+        cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
     } else if (sum === 21) {
         // console.log("Wohoo! You've got Blackjack! 🥳");
         message = "Wohoo! You've got Blackjack!";
