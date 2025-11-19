@@ -2,7 +2,7 @@
 // Set their values to a random number between 2-11
 
 let firstCard = 10;
-let secondCard = 22;
+let secondCard = 1;
 // 2. Create a variable, sum, and set it to the sum of the two cards.
 
 let sum = firstCard + secondCard;
@@ -46,12 +46,18 @@ let messageEl=document.getElementById("message-el");
 // 2. Store the sum paragraph in a variable called sumEl
 // let sumEl=document.getElementById("sum-el")
 let sumEl=document.querySelector(".sum-el")
+
+// 2. Store the cards paragraph in a variable called cardsEl
+let cardsEl=document.getElementById("cards-el")
+ // 3. Render the cars on the page using this format -> "Cards: 10 4"
+
  // 3. Render the sum on the page using this format -> "Sum: 14"
 function startGame(){
     if (sum <= 20) {
         // console.log("Do you want to draw a new card? 🙂");
         message = "Do you want to draw a new card?";
         sumEl.textContent="Sum: " +  sum;
+        cardsEl.textContent="Cards: " + firstCard + " " + secondCard;
     } else if (sum === 21) {
         // console.log("Wohoo! You've got Blackjack! 🥳");
         message = "Wohoo! You've got Blackjack!";
@@ -67,4 +73,8 @@ messageEl.textContent = message;
 }
 
 
-
+// 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
+function newCard() {
+    console.log("Drawing a new card from the deck!");
+    
+}
