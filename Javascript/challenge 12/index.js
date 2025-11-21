@@ -34,6 +34,30 @@ let age =  24
 let likePizza = true
 let description = [myName , age , likePizza]
 
-console.log(description[0] + " is " + typeof(description[0]));
-console.log(description[1] + " is " + typeof(description[1]));
-console.log(description[2] + " is " + typeof(description[2]));
+// console.log(description[0] + " is " + typeof(description[0]));
+// console.log(description[1] + " is " + typeof(description[1]));
+// console.log(description[2] + " is " + typeof(description[2]));
+
+// =========================================================================
+let card = [7,4];
+
+// to add new card, use push
+card.push(10);
+// console.log(card);
+
+// ==========================================================================
+// Push the newMessage to the messages array, and then log out the array
+
+let messages = [
+    "Hey, how's it going?",        
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately."
+]
+
+let newMessage = "Same here!"
+
+messages.push(newMessage);
+console.log(messages);
+
+messages.pop()
+console.log(messages);
