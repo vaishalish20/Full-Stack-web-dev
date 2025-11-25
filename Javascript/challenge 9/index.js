@@ -5,7 +5,8 @@
 // let secondCard = 1;
 // creating a function getRandomCard() and assigining it to the cards.
 function getRandomCard(){
-    return 5;
+    let randomNumber = Math.floor(Math.random()*13) + 1;
+    return randomNumber;
 }
 let firstCard = getRandomCard();
 let secondCard = getRandomCard();
