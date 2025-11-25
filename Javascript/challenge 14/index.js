@@ -44,5 +44,14 @@ console.log(totalTime);
 // ================================================
 // To generate random number for a dice 1 to 6
 
+// let randomNumber=Math.floor(Math.random()*6) + 1;
+// console.log(randomNumber);
+
+// creating a function rollDice() that will generate a random number from 1 to 6
+
+function rollDice(){
 let randomNumber=Math.floor(Math.random()*6) + 1;
-console.log(randomNumber);
+return randomNumber;
+}
+
+console.log(rollDice());
