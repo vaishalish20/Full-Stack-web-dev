@@ -5,7 +5,7 @@
 // let secondCard = 1;
 // creating a function getRandomCard() and assigining it to the cards.
 function getRandomCard(){
-    return 2;
+    return 5;
 }
 let firstCard = getRandomCard();
 let secondCard = getRandomCard();
