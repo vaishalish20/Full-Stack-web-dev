@@ -3,7 +3,7 @@
 
 let firstCard = 10;
 let secondCard = 1;
-
+// 1. Create a new array - cards - that contains firstCard and secondCard
 let cards= [firstCard , secondCard]
 // 2. Create a variable, sum, and set it to the sum of the two cards.
 
@@ -63,7 +63,14 @@ function renderGame() {
         // console.log("Do you want to draw a new card? 🙂");
         message = "Do you want to draw a new card?";
         sumEl.textContent = "Sum: " + sum;
-        cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+        // 2. Refer to the cards array when rendering out the cards
+        // cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+        cardsEl.textContent = "Cards: ";
+
+           // Create a for loop that renders out all the cards instead of just two
+    for(let i=0;i<cards.length;i++){
+        cardsEl.textContent+=cards[i]
+    }
     } else if (sum === 21) {
         // console.log("Wohoo! You've got Blackjack! 🥳");
         message = "Wohoo! You've got Blackjack!";
@@ -78,13 +85,15 @@ function renderGame() {
     messageEl.textContent = message;
 }
 
-
+ 
 
 // 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard() {
     console.log("Drawing a new card from the deck!");
     // 1. Create a card variable, and hard code its value to a number (2-11)
     let card = 2;
+    // Push the card to the card array
+    cards.push(card)
     // 2. Add the new card to the sum variable
     sum +=card;
     // 3. Call startGame()
