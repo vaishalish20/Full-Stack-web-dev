@@ -1,6 +1,6 @@
 // 1. Create two variables, firstCard and secondCard. 
 // Set their values to a random number between 2-11
-
+let hasBlackJack = false;
 // let firstCard = 10;
 // let secondCard = 1;
 // creating a function getRandomCard() and assigining it to the cards.
@@ -97,6 +97,7 @@ function renderGame() {
     } else if (sum === 21) {
         // console.log("Wohoo! You've got Blackjack! 🥳");
         message = "Wohoo! You've got Blackjack!";
+        hasBlackJack = true;
     } else {
         // console.log("You're out of the game! 😭");
         message = "You're out of the game!";
