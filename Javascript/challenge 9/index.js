@@ -5,8 +5,16 @@
 // let secondCard = 1;
 // creating a function getRandomCard() and assigining it to the cards.
 function getRandomCard(){
+
     let randomNumber = Math.floor(Math.random()*13) + 1;
-    return randomNumber;
+
+    if(randomNumber === 1){
+        return 11;
+    }else if(randomNumber > 10) {
+        return 10;
+    }else{
+        return randomNumber;
+    }
 }
 let firstCard = getRandomCard();
 let secondCard = getRandomCard();
@@ -66,11 +74,8 @@ function startGame(){
 }
 // 3. Render the sum on the page using this format -> "Sum: 14"
 function renderGame() {
-    if (sum <= 20) {
-        // console.log("Do you want to draw a new card? 🙂");
-        message = "Do you want to draw a new card?";
-        sumEl.textContent = "Sum: " + sum;
-        // 2. Refer to the cards array when rendering out the cards
+
+    // 2. Refer to the cards array when rendering out the cards
         // cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
         cardsEl.textContent = "Cards: ";
 
@@ -78,6 +83,11 @@ function renderGame() {
     for(let i=0;i<cards.length;i++){
         cardsEl.textContent+=cards[i]+ " "
     }
+sumEl.textContent = "Sum: " + sum;
+    if (sum <= 20) {
+        // console.log("Do you want to draw a new card? 🙂");
+        message = "Do you want to draw a new card?";
+        
     } else if (sum === 21) {
         // console.log("Wohoo! You've got Blackjack! 🥳");
         message = "Wohoo! You've got Blackjack!";
