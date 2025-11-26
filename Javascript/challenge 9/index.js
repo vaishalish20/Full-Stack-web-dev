@@ -4,26 +4,26 @@
 // let firstCard = 10;
 // let secondCard = 1;
 // creating a function getRandomCard() and assigining it to the cards.
-function getRandomCard(){
+function getRandomCard() {
 
-    let randomNumber = Math.floor(Math.random()*13) + 1;
+    let randomNumber = Math.floor(Math.random() * 13) + 1;
 
-    if(randomNumber === 1){
+    if (randomNumber === 1) {
         return 11;
-    }else if(randomNumber > 10) {
+    } else if (randomNumber > 10) {
         return 10;
-    }else{
+    } else {
         return randomNumber;
     }
 }
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
+// let firstCard = getRandomCard();
+// let secondCard = getRandomCard();
 // 1. Create a new array - cards - that contains firstCard and secondCard
-let cards= [firstCard , secondCard]
+// let cards= [firstCard , secondCard]
 // 2. Create a variable, sum, and set it to the sum of the two cards.
-
-let sum = firstCard + secondCard;
-
+let cards = [];
+// let sum = firstCard + secondCard;
+let sum = 0;
 // if else logic challenge
 // if (sum < 21){
 //     console.log("Do you want to draw a card?");
@@ -45,7 +45,8 @@ let sum = firstCard + secondCard;
 // 2. Flip its value to false in the appropriate code block 
 // 3. Log it out to check that you're doing it right
 
-let isAlive = true;
+// let isAlive = true;
+let isAlive = false;
 
 // 1. Declare a variable called message and assign its value to an empty string
 // 2. Reassign the message variable to the string we're logging out
@@ -69,25 +70,30 @@ let cardsEl = document.getElementById("cards-el")
 // 3. Render the cars on the page using this format -> "Cards: 10 4"
 
 // Create a new function called startGame() that calls renderGame()
-function startGame(){
+function startGame() {
+    isAlive = true;
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard;
     renderGame()
 }
 // 3. Render the sum on the page using this format -> "Sum: 14"
 function renderGame() {
 
     // 2. Refer to the cards array when rendering out the cards
-        // cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
-        cardsEl.textContent = "Cards: ";
+    // cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+    cardsEl.textContent = "Cards: ";
 
-           // Create a for loop that renders out all the cards instead of just two
-    for(let i=0;i<cards.length;i++){
-        cardsEl.textContent+=cards[i]+ " "
+    // Create a for loop that renders out all the cards instead of just two
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
     }
-sumEl.textContent = "Sum: " + sum;
+    sumEl.textContent = "Sum: " + sum;
     if (sum <= 20) {
         // console.log("Do you want to draw a new card? 🙂");
         message = "Do you want to draw a new card?";
-        
+
     } else if (sum === 21) {
         // console.log("Wohoo! You've got Blackjack! 🥳");
         message = "Wohoo! You've got Blackjack!";
@@ -102,7 +108,7 @@ sumEl.textContent = "Sum: " + sum;
     messageEl.textContent = message;
 }
 
- 
+
 
 // 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard() {
@@ -112,7 +118,7 @@ function newCard() {
     // Push the card to the card array
     cards.push(card)
     // 2. Add the new card to the sum variable
-    sum +=card;
+    sum += card;
     // 3. Call startGame()
-    startGame()
+    renderGame()
 }
