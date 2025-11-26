@@ -1,5 +1,17 @@
 // 1. Create two variables, firstCard and secondCard. 
 // Set their values to a random number between 2-11
+
+
+
+
+let player = {
+    name : "Noddy",
+    chips : 111
+}
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips;
+
+
 let hasBlackJack = false;
 // let firstCard = 10;
 // let secondCard = 1;
@@ -115,11 +127,16 @@ function renderGame() {
 function newCard() {
     console.log("Drawing a new card from the deck!");
     // 1. Create a card variable, and hard code its value to a number (2-11)
-    let card = getRandomCard();
+
+    if (isAlive === true && hasBlackJack === false){
+      let card = getRandomCard();
     // Push the card to the card array
     cards.push(card)
     // 2. Add the new card to the sum variable
     sum += card;
     // 3. Call startGame()
     renderGame()
+}
+
+  
 }
