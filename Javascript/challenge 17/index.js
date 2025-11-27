@@ -1,7 +1,7 @@
 // Try to modify the expression so that we get a range from 1 to 6
 
-let randomNumber = Math.floor(Math.random() *6 ) + 1;
-console.log(randomNumber);
+// let randomNumber = Math.floor(Math.random() *6 ) + 1;
+// console.log(randomNumber);
 
 // challenges 1: objects and functions
 // Create a person object that contains three keys: name, age, and county.
@@ -37,22 +37,22 @@ let age = 0
 
 // Create a conditional statement (if/else/else if) that logs out the discount
 // the passenger will get based upon the value of the age variable
-if(age < 6 ){
-    console.log("free");
+// if(age < 6 ){
+//     console.log("free");
     
-}else if(age >= 6 && age <= 17){
-    console.log("child discount");
+// }else if(age >= 6 && age <= 17){
+//     console.log("child discount");
     
-}else if(age >= 18 && age <= 26){
-    console.log("studnet discount");
+// }else if(age >= 18 && age <= 26){
+//     console.log("studnet discount");
     
-}else if(age >=27 && age<= 66){
-    console.log("full price");
+// }else if(age >=27 && age<= 66){
+//     console.log("full price");
     
-}else if(age >= 66){
-    console.log("senior citizen discount");
+// }else if(age >= 66){
+//     console.log("senior citizen discount");
     
-}
+// }
 
 //challenge 3:for loop
 
@@ -83,15 +83,15 @@ let largeCountries = ["Tuvalu","India","USA","Indonesia","Monaco"]
 // Use push() & pop() and their counterparts unshift() & shift()
 // Google how to use unshift() and shift()
 
-console.log(largeCountries);
-largeCountries.pop();
-console.log(largeCountries);
-largeCountries.push("Pakistan")
-console.log(largeCountries);
-largeCountries.shift();
-console.log(largeCountries);
-largeCountries.unshift("China")
-console.log(largeCountries);
+// console.log(largeCountries);
+// largeCountries.pop();
+// console.log(largeCountries);
+// largeCountries.push("Pakistan")
+// console.log(largeCountries);
+// largeCountries.shift();
+// console.log(largeCountries);
+// largeCountries.unshift("China")
+// console.log(largeCountries);
 
 
 // challenge 5: logical operators
@@ -106,3 +106,15 @@ if(dayOfMonth === 31 && weekday === "Friday"){
     console.log("😱");
     
 }
+
+// challenge 6 : rock paper scissor game
+let hands = ["rock", "paper", "scissor"]
+
+// Create a function that returns a random item from the array
+
+function playGame(){
+    let random = Math.floor(Math.random()*3);
+    return hands[random];
+}
+console.log(playGame());
+
