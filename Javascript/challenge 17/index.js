@@ -96,8 +96,13 @@ console.log(largeCountries);
 
 // challenge 5: logical operators
 
-let dayOfMonth = 31
+let dayOfMonth = 33
 let weekday = "Friday"
 
 // If it is Friday the 13th, log out this spooky face: 😱
 // Use the logical "AND operator" -> &&
+
+if(dayOfMonth === 31 && weekday === "Friday"){
+    console.log("😱");
+    
+}
