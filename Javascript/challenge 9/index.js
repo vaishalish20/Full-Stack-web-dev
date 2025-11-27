@@ -1,13 +1,17 @@
 // 1. Create two variables, firstCard and secondCard. 
 // Set their values to a random number between 2-11
 
-
-
-
+// created player object
 let player = {
     name : "Noddy",
-    chips : 111
+    chips : 111,
+    sayHello : function(){
+        console.log("Hello");
+        
+    }
 }
+// player.sayHello();    //testing function inside object
+
 let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips;
 
