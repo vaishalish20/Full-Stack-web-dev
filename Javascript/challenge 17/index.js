@@ -102,39 +102,63 @@ let weekday = "Friday"
 // If it is Friday the 13th, log out this spooky face: 😱
 // Use the logical "AND operator" -> &&
 
-if (dayOfMonth === 31 && weekday === "Friday") {
-    console.log("😱");
+// if (dayOfMonth === 31 && weekday === "Friday") {
+//     console.log("😱");
 
-}
+// }
 
 // challenge 6 : rock paper scissor game
 let hands = ["rock", "paper", "scissor"]
 
 // Create a function that returns a random item from the array
 
-function playGame() {
-    let random = Math.floor(Math.random() * 3);
-    return hands[random];
-}
-console.log(playGame());
+// function playGame() {
+//     let random = Math.floor(Math.random() * 3);
+//     return hands[random];
+// }
+// console.log(playGame());
 
 // challenge 7:Emoji fighter
 
-let fighters = ["🐉", "🐥", "🐊", "💩", "🦍", "🐢", "🐩", "🦭", "🦀", "🐝", "🤖", "🐘", "🐸", "🕷", "🐆", "🦕", "🦁"]
+// let fighters = ["🐉", "🐥", "🐊", "💩", "🦍", "🐢", "🐩", "🦭", "🦀", "🐝", "🤖", "🐘", "🐸", "🕷", "🐆", "🦕", "🦁"]
 
-let stageEl = document.getElementById("stage")
-let fightButton = document.getElementById("fightButton")
+// let stageEl = document.getElementById("stage")
+// let fightButton = document.getElementById("fightButton")
 
-fightButton.addEventListener("click", function () {
-    // Challenge:
-    // When the user clicks on the "Pick Fighters" button, pick two random 
-    // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
+// fightButton.addEventListener("click", function () {
+//     // Challenge:
+//     // When the user clicks on the "Pick Fighters" button, pick two random 
+//     // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
 
-    // creating two random number generator
-    let random1 = Math.floor(Math.random() * fighters.length)
-    let random2 = Math.floor(Math.random() * fighters.length)
+//     // creating two random number generator
+//     let random1 = Math.floor(Math.random() * fighters.length)
+//     let random2 = Math.floor(Math.random() * fighters.length)
 
-    //mapping the number to the fighters array and adding to stageEl
-    stageEl.textContent = fighters[random1] + " vs " + fighters[random2];
+//     //mapping the number to the fighters array and adding to stageEl
+//     stageEl.textContent = fighters[random1] + " vs " + fighters[random2];
 
-})
+// })
+
+// challenge 8: sorting fruits
+
+let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+let appleShelf = document.getElementById("apple-shelf")
+let orangeShelf = document.getElementById("orange-shelf")
+
+// Create a function that puts the apples onto the appleShelf
+// and the oranges onto the orangeShelf. Use a for loop,
+// a conditional statement, and the textContent property.
+
+function Fruitssort(){
+    for (let i=0; i < fruit.length ; i++){
+        if (fruit[i] === "🍎"){
+            appleShelf.textContent += "🍎"
+        }
+        else{
+            orangeShelf.textContent += "🍊"
+        }
+
+    }
+}
+
+Fruitssort();
