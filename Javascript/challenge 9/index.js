@@ -4,7 +4,7 @@
 // created player object
 let player = {
     name : "Noddy",
-    chips : 111,
+    chips : 1111,
     sayHello : function(){
         console.log("Hello");
         
@@ -123,6 +123,7 @@ function renderGame() {
     // console.log(message);
     // 2. Display the message in the messageEl using messageEl.textContent
     messageEl.textContent = message;
+
 }
 
 
