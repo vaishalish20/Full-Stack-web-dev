@@ -7,18 +7,18 @@
 // Create a person object that contains three keys: name, age, and county.
 // Use yourself as an example to set the values for name, age, and country
 let person = {
-    name : "Noddy",
-    age : 20,
-    country : "Toyland"
+    name: "Noddy",
+    age: 20,
+    country: "Toyland"
 }
 
 // Create a function, logData(), that uses the person object to create a
 // string in the following format: 
 
-function logData(){
+function logData() {
     let string = person.name + " is " + person.age + " years old and lives in " + person.country
     console.log(string);
-    
+
 }
 // "Noddy is 20 years old and lives in Toyland"
 
@@ -39,19 +39,19 @@ let age = 0
 // the passenger will get based upon the value of the age variable
 // if(age < 6 ){
 //     console.log("free");
-    
+
 // }else if(age >= 6 && age <= 17){
 //     console.log("child discount");
-    
+
 // }else if(age >= 18 && age <= 26){
 //     console.log("studnet discount");
-    
+
 // }else if(age >=27 && age<= 66){
 //     console.log("full price");
-    
+
 // }else if(age >= 66){
 //     console.log("senior citizen discount");
-    
+
 // }
 
 //challenge 3:for loop
@@ -70,12 +70,12 @@ The 5 largest countries in the world:
 
 // for(let i=0; i<largeCountries.length; i++){
 //     console.log(largeCountries[i]);
-    
+
 // }
 
 // challenge 4: push pop functions, shift and unshift
 
-let largeCountries = ["Tuvalu","India","USA","Indonesia","Monaco"]
+let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"]
 
 // You need to help me fixup the largeCountries array so that 
 // China and Pakistan are added back into their respective places
@@ -102,9 +102,9 @@ let weekday = "Friday"
 // If it is Friday the 13th, log out this spooky face: 😱
 // Use the logical "AND operator" -> &&
 
-if(dayOfMonth === 31 && weekday === "Friday"){
+if (dayOfMonth === 31 && weekday === "Friday") {
     console.log("😱");
-    
+
 }
 
 // challenge 6 : rock paper scissor game
@@ -112,9 +112,29 @@ let hands = ["rock", "paper", "scissor"]
 
 // Create a function that returns a random item from the array
 
-function playGame(){
-    let random = Math.floor(Math.random()*3);
+function playGame() {
+    let random = Math.floor(Math.random() * 3);
     return hands[random];
 }
 console.log(playGame());
 
+// challenge 7:Emoji fighter
+
+let fighters = ["🐉", "🐥", "🐊", "💩", "🦍", "🐢", "🐩", "🦭", "🦀", "🐝", "🤖", "🐘", "🐸", "🕷", "🐆", "🦕", "🦁"]
+
+let stageEl = document.getElementById("stage")
+let fightButton = document.getElementById("fightButton")
+
+fightButton.addEventListener("click", function () {
+    // Challenge:
+    // When the user clicks on the "Pick Fighters" button, pick two random 
+    // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
+
+    // creating two random number generator
+    let random1 = Math.floor(Math.random() * fighters.length)
+    let random2 = Math.floor(Math.random() * fighters.length)
+
+    //mapping the number to the fighters array and adding to stageEl
+    stageEl.textContent = fighters[random1] + " vs " + fighters[random2];
+
+})
