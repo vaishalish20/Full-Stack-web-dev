@@ -16,14 +16,21 @@ inputBtn.addEventListener("click", function () {
     // instead of the hard-coded "www.awesomeleads.com" value
     // Google -> "get value from input field javascript"
     myLeads.push(inputEl.value)
+    // Clear out the leads
+     inputEl.value = ""
      // 2. Call the renderLeads() function
      renderLeads()
+//  // Clear out the leads
+//      inputEl.value = ""
 })
 
 
 // Render the leads in the unordered list using ulEl.textContent
 // Replace .textContent with .innerHTML and use <li> tags
-
+// function renderLead(){
+//     let listItem = "<li>" + inputEl.value + "</li>";
+//     ulEl.innerHTML += listItem;
+// }
 
 
 // 1. Create a variable, listItems, to hold all the HTML for the list items
