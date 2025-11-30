@@ -40,9 +40,16 @@ function renderLeads() {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
         // console.log(myLeads[i]);   
+        
         // 2. Add the item to the listItems variable instead of the ulEl.innerHTML
         // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>" ;
-        listItems += "<li>" + myLeads[i] + "</li>";
+                // Wrap the lead in an anchor tag (<a>) inside the <li>
+        // Can you make the link open in a new tab?
+
+        // listItems += "<li><a href=" +  myLeads[i] +" target='_blank'>" + myLeads[i] + "</a></li>";
+        listItems += `<li>
+        <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
+        </li>`;
         // create element
         // set textcontent
         // append in ul
