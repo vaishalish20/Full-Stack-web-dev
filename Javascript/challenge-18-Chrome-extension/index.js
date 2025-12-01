@@ -47,9 +47,10 @@ function renderLeads() {
         // Can you make the link open in a new tab?
 
         // listItems += "<li><a href=" +  myLeads[i] +" target='_blank'>" + myLeads[i] + "</a></li>";
-        listItems += `<li>
-        <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
-        </li>`;
+        listItems += `<li><a href='${myLeads[i]}' target='_blank'>${myLeads[i]}</a></li>`;
+        // listItems += `<li>
+        // <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
+        // </li>`;
         // create element
         // set textcontent
         // append in ul
