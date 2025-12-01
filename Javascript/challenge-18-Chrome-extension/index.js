@@ -23,6 +23,20 @@ inputBtn.addEventListener("click", function () {
 //  // Clear out the leads
 //      inputEl.value = ""
 })
+localStorage.setItem("myLeads","www.example.com")
+// console.log(localStorage.getItem("myLeads"));
+
+// 1. Save a key-value pair in localStorage
+// 2. Refresh the page. Get the value and log it to the console
+// 3. Clear localStorage
+localStorage.setItem("myName","Noddy");
+console.log(localStorage.getItem("myName"));
+localStorage.clear()
+// HINTS:
+// localStorage.setItem(key, value)
+// localStorage.getItem(key)
+// localStorage.clear()
+// PS: both key and value need to be strings
 
 
 // Render the leads in the unordered list using ulEl.textContent
