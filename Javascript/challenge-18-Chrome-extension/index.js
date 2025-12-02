@@ -1,6 +1,25 @@
 // Create two variables:
 // myLeads -> should be assigned to an empty array
-let myLeads = [];
+let myLeads = `["www.googly.com"]`;
+
+// 1. Turn the myLeads string into an array
+// 2. Push a new value to the array
+// 3. Turn the array into a string again
+// 4. Console.log the string using typeof to verify that it's a string
+myLeads = JSON.parse(myLeads)
+console.log(myLeads);
+
+myLeads.push("www.hello.com")
+console.log(myLeads);
+
+myLeads = JSON.stringify(myLeads)
+console.log(myLeads);
+console.log(typeof myLeads);
+
+
+
+
+
 // inputEl -> should be assigned to the text input field
 //note: using const datatype instead of let to not change its value
 const inputEl = document.getElementById("input-el")
