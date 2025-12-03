@@ -1,20 +1,21 @@
 // Create two variables:
 // myLeads -> should be assigned to an empty array
-let myLeads = `["www.googly.com"]`;
+let myLeads = ["www.googly.com"];
 
 // 1. Turn the myLeads string into an array
 // 2. Push a new value to the array
 // 3. Turn the array into a string again
 // 4. Console.log the string using typeof to verify that it's a string
-myLeads = JSON.parse(myLeads)
-console.log(myLeads);
 
-myLeads.push("www.hello.com")
-console.log(myLeads);
+// myLeads = JSON.parse(myLeads)
+// console.log(myLeads);
 
-myLeads = JSON.stringify(myLeads)
-console.log(myLeads);
-console.log(typeof myLeads);
+// myLeads.push("www.hello.com")
+// console.log(myLeads);
+
+// myLeads = JSON.stringify(myLeads)
+// console.log(myLeads);
+// console.log(typeof myLeads);
 
 
 
@@ -28,6 +29,15 @@ const inputBtn = document.getElementById("input-btn")
 // 2. Grab the unordered list and store it in a const variable called ulEl
 const ulEl = document.getElementById("ul-el")
 // Push the value "www.awesomelead.com" to myArray when the input button is clicked
+
+// Get the leads from the localStorage - PS: JSON.parse()
+// Store it in a variable, leadsFromLocalStorage
+// Log out the variable
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+console.log(leadsFromLocalStorage);
+
+
+
 inputBtn.addEventListener("click", function () {
     // myLeads.push("www.awesomelead.com")  
 
@@ -36,21 +46,31 @@ inputBtn.addEventListener("click", function () {
     // Google -> "get value from input field javascript"
     myLeads.push(inputEl.value)
     // Clear out the leads
-     inputEl.value = ""
-     // 2. Call the renderLeads() function
-     renderLeads()
-//  // Clear out the leads
-//      inputEl.value = ""
+    inputEl.value = ""
+    // Save the myLeads array to localStorage 
+    // PS: remember JSON.stringify()
+    
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+
+
+    // 2. Call the renderLeads() function
+    renderLeads()
+    //  // Clear out the leads
+    //      inputEl.value = ""
+
+    // To verify that it works:
+console.log(localStorage.getItem("myLeads"));
+
 })
-localStorage.setItem("myLeads","www.example.com")
+// localStorage.setItem("myLeads", "www.example.com")
 // console.log(localStorage.getItem("myLeads"));
 
 // 1. Save a key-value pair in localStorage
 // 2. Refresh the page. Get the value and log it to the console
 // 3. Clear localStorage
-localStorage.setItem("myName","Noddy");
-console.log(localStorage.getItem("myName"));
-localStorage.clear()
+// localStorage.setItem("myName", "Noddy");
+// console.log(localStorage.getItem("myName"));
+// localStorage.clear()
 // HINTS:
 // localStorage.setItem(key, value)
 // localStorage.getItem(key)
@@ -73,10 +93,10 @@ function renderLeads() {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
         // console.log(myLeads[i]);   
-        
+
         // 2. Add the item to the listItems variable instead of the ulEl.innerHTML
         // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>" ;
-                // Wrap the lead in an anchor tag (<a>) inside the <li>
+        // Wrap the lead in an anchor tag (<a>) inside the <li>
         // Can you make the link open in a new tab?
 
         // listItems += "<li><a href=" +  myLeads[i] +" target='_blank'>" + myLeads[i] + "</a></li>";
@@ -91,7 +111,7 @@ function renderLeads() {
         // const li = document.createElement("li");
         // li.textContent = myLeads[i];
         // ulEl.append(li)
-       
+
 
     }
     // 3. Render the listItems inside the unordered list using ulEl.innerHTML
