@@ -33,8 +33,14 @@ const ulEl = document.getElementById("ul-el")
 // Get the leads from the localStorage - PS: JSON.parse()
 // Store it in a variable, leadsFromLocalStorage
 // Log out the variable
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-console.log(leadsFromLocalStorage);
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+// console.log(leadsFromLocalStorage);
+// 1. to check truthly of leadsFromLocalStorage
+if(leadsFromLocalStorage){
+    myLeads = localStorage
+    renderLeads()
+}
+// 2. if so set myLeads to its value and call renderLeads()
 
 
 
