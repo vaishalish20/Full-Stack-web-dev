@@ -1,6 +1,6 @@
 // Create two variables:
 // myLeads -> should be assigned to an empty array
-let myLeads = ["www.googly.com"];
+let myLeads = [];
 
 // 1. Turn the myLeads string into an array
 // 2. Push a new value to the array
@@ -30,18 +30,32 @@ const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 // Push the value "www.awesomelead.com" to myArray when the input button is clicked
 
+// 1. Store the delete button in a deleteBtn variable
+const deleteBtn = document.getElementById("delete-btn");
+
 // Get the leads from the localStorage - PS: JSON.parse()
 // Store it in a variable, leadsFromLocalStorage
 // Log out the variable
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+// changing let to const
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 // console.log(leadsFromLocalStorage);
 // 1. to check truthly of leadsFromLocalStorage
+// 2. if so set myLeads to its value and call renderLeads()
 if(leadsFromLocalStorage){
-    myLeads = localStorage
+    myLeads = leadsFromLocalStorage
     renderLeads()
 }
-// 2. if so set myLeads to its value and call renderLeads()
 
+// 2. Listen for double clicks on the delete button (google it!)
+// 3. When clicked, clear localStorage, myLeads, and the DOM
+deleteBtn.addEventListener("dblclick",function (){
+    localStorage.clear();
+    myLeads= []
+    listItems = ""
+    renderLeads()
+    
+
+})
 
 
 inputBtn.addEventListener("click", function () {
