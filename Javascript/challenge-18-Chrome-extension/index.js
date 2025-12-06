@@ -17,10 +17,6 @@ let myLeads = [];
 // console.log(myLeads);
 // console.log(typeof myLeads);
 
-
-
-
-
 // inputEl -> should be assigned to the text input field
 //note: using const datatype instead of let to not change its value
 const inputEl = document.getElementById("input-el")
@@ -43,18 +39,46 @@ const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 // 2. if so set myLeads to its value and call renderLeads()
 if(leadsFromLocalStorage){
     myLeads = leadsFromLocalStorage
-    renderLeads()
+    render(myLeads)
 }
+
+// 1. Create a variable, listItems, to hold all the HTML for the list items
+// Assign it to an empty string to begin with
+// 1. Wrap the code below in a renderLeads() function
+function render(leads) {
+    let listItems = ""
+    for (let i = 0; i < leads.length; i++) {
+        // console.log(myLeads[i]);   
+
+        // 2. Add the item to the listItems variable instead of the ulEl.innerHTML
+        // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>" ;
+        // Wrap the lead in an anchor tag (<a>) inside the <li>
+        // Can you make the link open in a new tab?
+
+        // listItems += "<li><a href=" +  myLeads[i] +" target='_blank'>" + myLeads[i] + "</a></li>";
+        listItems += `<li><a href='${leads[i]}' target='_blank'>${leads[i]}</a></li>`;
+        // listItems += `<li>
+        // <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
+        // </li>`;
+        // create element
+        // set textcontent
+        // append in ul
+
+        // const li = document.createElement("li");
+        // li.textContent = myLeads[i];
+        // ulEl.append(li)
+    }
+    // 3. Render the listItems inside the unordered list using ulEl.innerHTML
+    ulEl.innerHTML = listItems;
+}
+
 
 // 2. Listen for double clicks on the delete button (google it!)
 // 3. When clicked, clear localStorage, myLeads, and the DOM
 deleteBtn.addEventListener("dblclick",function (){
     localStorage.clear();
     myLeads= []
-    listItems = ""
-    renderLeads()
-    
-
+    render(myLeads)
 })
 
 
@@ -74,12 +98,12 @@ inputBtn.addEventListener("click", function () {
 
 
     // 2. Call the renderLeads() function
-    renderLeads()
+    render(myLeads)
     //  // Clear out the leads
     //      inputEl.value = ""
 
     // To verify that it works:
-console.log(localStorage.getItem("myLeads"));
+// console.log(localStorage.getItem("myLeads"));
 
 })
 // localStorage.setItem("myLeads", "www.example.com")
@@ -106,34 +130,3 @@ console.log(localStorage.getItem("myLeads"));
 // }
 
 
-// 1. Create a variable, listItems, to hold all the HTML for the list items
-// Assign it to an empty string to begin with
-// 1. Wrap the code below in a renderLeads() function
-function renderLeads() {
-    let listItems = ""
-    for (let i = 0; i < myLeads.length; i++) {
-        // console.log(myLeads[i]);   
-
-        // 2. Add the item to the listItems variable instead of the ulEl.innerHTML
-        // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>" ;
-        // Wrap the lead in an anchor tag (<a>) inside the <li>
-        // Can you make the link open in a new tab?
-
-        // listItems += "<li><a href=" +  myLeads[i] +" target='_blank'>" + myLeads[i] + "</a></li>";
-        listItems += `<li><a href='${myLeads[i]}' target='_blank'>${myLeads[i]}</a></li>`;
-        // listItems += `<li>
-        // <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
-        // </li>`;
-        // create element
-        // set textcontent
-        // append in ul
-
-        // const li = document.createElement("li");
-        // li.textContent = myLeads[i];
-        // ulEl.append(li)
-
-
-    }
-    // 3. Render the listItems inside the unordered list using ulEl.innerHTML
-    ulEl.innerHTML = listItems;
-}
