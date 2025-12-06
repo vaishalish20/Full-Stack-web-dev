@@ -108,22 +108,32 @@
 // Use a for loop, template strings (``), plus equals (+=)
 // .innerHTML to solve the challenge.
 
-const containerEl = document.getElementById("container")
+// const containerEl = document.getElementById("container")
 
-const imgs = [
-    "images/img1.png",
-    "images/img2.jpg",
-    "images/img3.png"
-]
-console.log();
+// const imgs = [
+//     "images/img1.png",
+//     "images/img2.jpg",
+//     "images/img3.png"
+// ]
+// console.log();
 
-//  <img class="team-img" src="images/img1.png">
-function renderTeamImages() {
-    let imgsDOM = ""
-    for (let i = 0; i < imgs.length; i++) {
-        imgsDOM += `<img alt="places" class="team-img" src="${imgs[i]}">`
-    }
-    containerEl.innerHTML = imgsDOM
-}
+// //  <img class="team-img" src="images/img1.png">
+// function renderTeamImages() {
+//     let imgsDOM = ""
+//     for (let i = 0; i < imgs.length; i++) {
+//         imgsDOM += `<img alt="places" class="team-img" src="${imgs[i]}">`
+//     }
+//     containerEl.innerHTML = imgsDOM
+// }
 
-renderTeamImages()
+// renderTeamImages()
+
+// challenge 7: rounding numbers
+
+// Challenge:
+// Round the price in the button down to two decimal places.
+// Don't know which method to use? Google it!
+
+const totalPrice = 420.69235632455
+const btn = document.getElementById("purchase-btn")
+btn.textContent = `Buy €${totalPrice.toFixed(2)}`

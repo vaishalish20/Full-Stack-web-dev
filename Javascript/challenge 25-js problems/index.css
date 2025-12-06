@@ -1,4 +1,5 @@
-body {
+/* for challenge 4  */
+/* body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: whitesmoke;
     text-align: center;
@@ -18,4 +19,23 @@ h1 {
     width: 100px;
     border-radius: 100%;
     margin: 10px;
+} */
+
+/* for challenge 7 */
+
+html, body {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    border: none;
+    border-radius: 200px;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #fc807f;
+    color: white;
 }
