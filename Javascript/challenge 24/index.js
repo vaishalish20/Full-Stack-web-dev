@@ -13,3 +13,16 @@ greetUser("Hello","Noddy","👋");
 
 // ======================================================================================
 
+// Nuumber as function parameters
+
+// create a function add() that add two number together and returns the sum.
+
+function add(num1, num2) {
+    return num1 + num2;
+    
+}
+
+
+
+console.log(add(3,4));     //should be 7
+console.log(add(9,102));   //should be 111
