@@ -26,3 +26,18 @@ function add(num1, num2) {
 
 console.log(add(3,4));     //should be 7
 console.log(add(9,102));   //should be 111
+
+
+// ============================================================================
+
+// Parameters vs Arguments
+
+//  Parameters = used in function definition (inside of a function)
+// Arguments = used in function Invoke or call (outside of a function)
+
+
+
+// what are greeting and name ?     Ans = parameters
+// what are "Hello" and "Noddy"     Ans = arguments
+// what are num1 and num2           Ans = parameters
+// what are 3 and 4                 Ans = arguments
