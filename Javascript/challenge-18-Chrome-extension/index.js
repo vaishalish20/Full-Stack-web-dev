@@ -49,12 +49,16 @@ if (leadsFromLocalStorage) {
 // listen for clicks on tabBtn and log's Per's Linkdin URL to the console
 tabBtn.addEventListener("click", function () {
 
-    chrome.tabs.query({ active: true, currentwindow: true }, function (tabs) {
-        // save the url instead of loggin in out
+    // chrome.tabs.query({ active: true, currentwindow: true }, function (tabs) {
+    // save the url instead of loggin in out
+    // })
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         myLeads.push(tabs[0].url)
         localStorage.setItem("myLeads", JSON.stringify(myLeads))
         render(myLeads)
+
     })
+
 
 
 
