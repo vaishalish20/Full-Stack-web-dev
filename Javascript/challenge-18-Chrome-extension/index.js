@@ -35,16 +35,46 @@ const deleteBtn = document.getElementById("delete-btn");
 // changing let to const
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 // console.log(leadsFromLocalStorage);
+
+// grab the save tab button and store it in a variable tabBtn
+const tabBtn = document.getElementById("tab-btn")
 // 1. to check truthly of leadsFromLocalStorage
 // 2. if so set myLeads to its value and call renderLeads()
-if(leadsFromLocalStorage){
+if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
 
+const tabs = [
+    { url: "https://www.linkedin.com/in/per-harald-borgen/" }
+]
+// listen for clicks on tabBtn and log's Per's Linkdin URL to the console
+tabBtn.addEventListener("click", function () {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        // since only one tab should be active and in the current window at once
+        // the return variable should only have one entry
+        let activeTab = tabs[0];
+        let activeTabId = activeTab.id; // or do whatever you need
+    });
+
+
+
+    // save the url instead of loggin in out
+    myLeads.push(tabs[0].url)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
+    //    console.log(tabs[0].url);
+
+
+})
 // 1. Create a variable, listItems, to hold all the HTML for the list items
 // Assign it to an empty string to begin with
 // 1. Wrap the code below in a renderLeads() function
+
+// Refector the function so that it takes a parameter, leads, that it uses
+// instead of the global myLeads variable. Remember to update all invocations 
+// of the function as well.
+
 function render(leads) {
     let listItems = ""
     for (let i = 0; i < leads.length; i++) {
@@ -75,9 +105,9 @@ function render(leads) {
 
 // 2. Listen for double clicks on the delete button (google it!)
 // 3. When clicked, clear localStorage, myLeads, and the DOM
-deleteBtn.addEventListener("dblclick",function (){
+deleteBtn.addEventListener("dblclick", function () {
     localStorage.clear();
-    myLeads= []
+    myLeads = []
     render(myLeads)
 })
 
@@ -93,7 +123,7 @@ inputBtn.addEventListener("click", function () {
     inputEl.value = ""
     // Save the myLeads array to localStorage 
     // PS: remember JSON.stringify()
-    
+
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
 
 
@@ -103,7 +133,7 @@ inputBtn.addEventListener("click", function () {
     //      inputEl.value = ""
 
     // To verify that it works:
-// console.log(localStorage.getItem("myLeads"));
+    // console.log(localStorage.getItem("myLeads"));
 
 })
 // localStorage.setItem("myLeads", "www.example.com")
