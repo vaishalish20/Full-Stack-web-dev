@@ -41,3 +41,17 @@ console.log(add(9,102));   //should be 111
 // what are "Hello" and "Noddy"     Ans = arguments
 // what are num1 and num2           Ans = parameters
 // what are 3 and 4                 Ans = arguments
+
+
+// ============================================================================
+
+// create a function getFirst(arr), that returns the first item in the array
+function getFirst(arr){
+    return arr[0];
+}
+
+
+//call it with an array as an argument to verify that it works
+
+let array = ["apple","mango","orange"];
+console.log(getFirst(array));
