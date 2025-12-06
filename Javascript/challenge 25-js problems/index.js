@@ -35,3 +35,18 @@ function traverse(arr) {
 }
 
 traverse(myCourses)
+
+// challenge 3 : save to localStorage 
+
+// Save a value to localStorage
+// Delete your code and refresh the page
+// Fetch your value from localStorage and log it out
+
+localStorage.setItem("myName","Noddy")
+localStorage.setItem("myMessage","Hello World")
+let messageValue = localStorage.getItem("myMessage")
+console.log(messageValue);
+
+
+
+
