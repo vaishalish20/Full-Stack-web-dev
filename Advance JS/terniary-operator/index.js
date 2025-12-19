@@ -34,3 +34,26 @@
 
 // Note: With multiple condition, it is better to use if-else as that will be easier to read.
 // Above terniary is okay, but not readable if add more conditions.
+
+// Challenge 1
+
+let playerGuess = 3;
+let correctAnswer = 3;
+
+// let message = ''
+
+// if(playerGuess === correctAnswer){
+//     message = 'Correct';
+// }else{
+//     message = 'Wrong'
+// }
+
+// const message = playerGuess === correctAnswer ? 'Correct' : 'Wrong';
+// console.log(message);
+
+
+// challenge 2 
+// Refractor to add more complexity
+
+const message = playerGuess === correctAnswer ? 'Correct' : playerGuess < correctAnswer ? "you guessed number is smaller":"your guessed number is greater";
+console.log(message);
