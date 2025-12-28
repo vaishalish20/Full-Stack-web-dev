@@ -1,32 +1,52 @@
-function getStockData(){
+function getStockData() {
     return {
-        name : 'QtechAI',
+        name: 'QtechAI',
         sym: 'QTA',
-        price: Math.round(Math.random()*3*100)/100,
-        time:  getCurrentFormattedTime() 
+        price: getNewPrice(),
+        time: getCurrentTime()
     }
-    
 }
-
 console.log(getStockData());
 
-
-function getNewPrice(){
-    let firstPrice = Math.round(Math.random()*3*100)/100;
-
+function getNewPrice() {
+    return Math.round(Math.random() * 3 * 100) / 100;
 }
 
-function getCurrentFormattedTime() {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
+let previousPrice = null;
 
-  return `${hours}:${minutes}:${seconds}`;
+// setInterval(() => {
+//     const currentPrice = getNewPrice()
+//     console.log(currentPrice);
+
+//     if (previousPrice !== null) {
+//         if (currentPrice > previousPrice) {
+//             console.log("Increased");
+
+//         } else if (currentPrice < previousPrice) {
+//             console.log("Decreased");
+
+//         } else {
+//             console.log("No change");
+
+//         }
+//     }
+//     console.log("Current", currentPrice);
+//     previousPrice = currentPrice;
+
+
+// }, 1500);
+
+function getCurrentTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    return `${hours}:${minutes}:${seconds}`;
 }
 
 // Example Usage:
-console.log(getCurrentFormattedTime());     // e.g., "14:35:08"
+// console.log(getCurrentTime());     // e.g., "14:35:08"
 
 /* Note:
 (for price) return a random number between 0 and 3 to two decimal places 
