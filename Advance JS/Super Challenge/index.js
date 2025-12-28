@@ -13,7 +13,8 @@ Challenge:
 
 ⚠ You will need to write code here in index.js and in fakeStockAPI.js.
 */
-
+import {getStockData} from './fakeStockAPI'
+console.log(getStockData());
 function renderStockTicker(stockData) {
   const stockDisplayName = document.getElementById('name')
   const stockDisplaySymbol = document.getElementById('symbol')
