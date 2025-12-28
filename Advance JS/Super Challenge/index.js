@@ -20,4 +20,10 @@ function renderStockTicker(stockData) {
   const stockDisplayPrice = document.getElementById('price')
   const stockDisplayPriceIcon = document.getElementById('price-icon')
   const stockDisplayTime = document.getElementById('time')
+
+
+  stockDisplayName.textContent = `Name: Noddy`
+  stockDisplaySymbol.textContent = `Symbol: QTA`
+  stockDisplayPrice.textContent = `Price: 0.95 ${stockDisplayPriceIcon}`
+  stockDisplayTime.textContent = `Time: 12:54:20`
 }
