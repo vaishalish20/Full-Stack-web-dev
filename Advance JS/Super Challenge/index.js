@@ -16,21 +16,22 @@ Challenge:
 ⚠ You will need to write code here in index.js and in fakeStockAPI.js.
 */
 
-setInterval(function(){
+setInterval(function () {
     const stockData = getStockData()
     renderStockTicker(stockData)
 }, 1500);
 
 function renderStockTicker(stockData) {
-  const stockDisplayName = document.getElementById('name')
-  const stockDisplaySymbol = document.getElementById('symbol')
-  const stockDisplayPrice = document.getElementById('price')
-  const stockDisplayPriceIcon = document.getElementById('price-icon')
-  const stockDisplayTime = document.getElementById('time')
+    const stockDisplayName = document.getElementById('name')
+    const stockDisplaySymbol = document.getElementById('symbol')
+    const stockDisplayPrice = document.getElementById('price')
+    const stockDisplayPriceIcon = document.getElementById('price-icon')
+    const stockDisplayTime = document.getElementById('time')
 
+    const { name, sym, price, time } = stockData
 
-  stockDisplayName.textContent = `Name: Noddy`
-  stockDisplaySymbol.textContent = `Symbol: QTA`
-  stockDisplayPrice.textContent = `Price: 0.95 ${stockDisplayPriceIcon}`
-  stockDisplayTime.textContent = `Time: 12:54:20`
+    stockDisplayName.innerText = `Name: ${name}`
+    stockDisplaySymbol.innerText = `Symbol: ${sym}`
+    stockDisplayPrice.innerText = `Price: ${price}`
+    stockDisplayTime.innerText = `Time: ${time}`
 }
