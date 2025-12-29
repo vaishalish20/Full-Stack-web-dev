@@ -1,3 +1,5 @@
+import { getStockData } from './fakeStockAPI.js';
+// Remarks: add full name of the imported file.(with .js extension)
 /*
 App requirements:
 - The app should display the name, symbol, and price of the stock, with a timestamp as per the screenshot.
@@ -13,8 +15,12 @@ Challenge:
 
 ⚠ You will need to write code here in index.js and in fakeStockAPI.js.
 */
-import {getStockData} from './fakeStockAPI'
-console.log(getStockData());
+
+setInterval(function(){
+    const stockData = getStockData()
+    renderStockTicker(stockData)
+}, 1500);
+
 function renderStockTicker(stockData) {
   const stockDisplayName = document.getElementById('name')
   const stockDisplaySymbol = document.getElementById('symbol')
