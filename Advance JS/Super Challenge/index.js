@@ -21,6 +21,7 @@ setInterval(function () {
     renderStockTicker(stockData)
 }, 1500);
 
+let previousPrice = null
 function renderStockTicker(stockData) {
     const stockDisplayName = document.getElementById('name')
     const stockDisplaySymbol = document.getElementById('symbol')
@@ -30,8 +31,19 @@ function renderStockTicker(stockData) {
 
     const { name, sym, price, time } = stockData
 
+    const PriceIconDirection = price > previousPrice ? 'green.png' : price < previousPrice? 'red.png':'grey.png'
+    const priceIconElement = document.createElement('img')    
+    priceIconElement.src = `imgs/${PriceIconDirection}`
+    priceIconElement.alt = 'Price direction Icon'
+    stockDisplayPriceIcon.innerHTML = ''
+    stockDisplayPriceIcon.appendChild(priceIconElement)
+
+
     stockDisplayName.innerText = `Name: ${name}`
     stockDisplaySymbol.innerText = `Symbol: ${sym}`
     stockDisplayPrice.innerText = `Price: ${price}`
     stockDisplayTime.innerText = `Time: ${time}`
+
+    previousPrice = price
+
 }
