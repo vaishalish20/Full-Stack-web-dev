@@ -40,4 +40,5 @@ const speedWarning = speed => `You are going at ${speed} mph!`
 console.log(speedWarning(200));
 
 //write least code possible for arrow functions
+//arrow functions
 
