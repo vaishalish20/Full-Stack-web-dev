@@ -30,15 +30,29 @@
 // when we have  0 or 2 parameters, we need brackets
 // can use return keyword when we want to return one line of code
 
-// challenge
+// challenge 1
 
 // function speedWarning(speed){
 //     return `You are going at ${speed} mph!`
 // }
 
-const speedWarning = speed => `You are going at ${speed} mph!`
-console.log(speedWarning(200));
+// const speedWarning = speed => `You are going at ${speed} mph!`
+// console.log(speedWarning(200));
 
 //write least code possible for arrow functions
 //arrow functions
 
+//challenge 2 
+//refactor the function so it only warns drivers who are going over the speed limit.
+//function takes two parameter-first the limit and second is actual driver speed
+
+const speedWarning = (limit, speed) => {
+    if (speed > limit)
+        return `You need to lower your speed`
+    else if(speed < limit)
+        return `You going at good speed`
+    else
+        return `Be carefully`
+}
+
+console.log(speedWarning(60,60));
