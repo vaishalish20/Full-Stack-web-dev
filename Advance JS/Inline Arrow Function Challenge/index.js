@@ -8,3 +8,4 @@ import { itemsBoughtArr } from "./itemsBrought";
 }
 
 console.log(calculateTotalCost(itemsBoughtArr));
+//cheatcommit
