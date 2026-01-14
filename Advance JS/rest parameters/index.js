@@ -11,18 +11,27 @@
 //note: the rest paramters should be the last formal paramters
 //means function setPermissionLevel(...names,permissionLevel) --not correct
 
-function setPermissionLevel(permissionLevel, ...names) {
-    // console.log(names);
-    // the above log statement will give us array of parameters that we passed. we can use forEach Loop to iterate over the array.
-    names.forEach(name => console.log(`${name} now has ${permissionLevel} level access`));
-    //in this way, we can iterate over the rest parameters (names) and can pass as much arguments as we want.
+// function setPermissionLevel(permissionLevel, ...names) {
+//     // console.log(names);
+//     // the above log statement will give us array of parameters that we passed. we can use forEach Loop to iterate over the array.
+//     names.forEach(name => console.log(`${name} now has ${permissionLevel} level access`));
+//     //in this way, we can iterate over the rest parameters (names) and can pass as much arguments as we want.
 
-}
-setPermissionLevel('admin', 'Dave', 'Sally', 'Mike', 'Clare')
+// }
+// setPermissionLevel('admin', 'Dave', 'Sally', 'Mike', 'Clare')
 
 //Challenge
 
-function getLabelsHtml() {
+function getLabelsHtml(text, sender, ...staffNames) {
+    const labelsHtml = staffNames.map(staffName =>
+        `<div class="label-card">
+      <p>Dear ${staffName.name} </p>
+      <p>${text}</p>
+      <p>Best wishes,</p>
+      <p>${sender}</p>
+    </div>`
+    ).join('')
+    return labelsHtml;
     /*
     Challenge:
     1. Add parameters.
