@@ -21,18 +21,7 @@
 // setPermissionLevel('admin', 'Dave', 'Sally', 'Mike', 'Clare')
 
 //Challenge
-
-function getLabelsHtml(text, sender, ...staffNames) {
-    const labelsHtml = staffNames.map(staffName =>
-        `<div class="label-card">
-      <p>Dear ${staffName.name} </p>
-      <p>${text}</p>
-      <p>Best wishes,</p>
-      <p>${sender}</p>
-    </div>`
-    ).join('')
-    return labelsHtml;
-    /*
+   /*
     Challenge:
     1. Add parameters.
     2. Update the HTML template where you
@@ -46,8 +35,21 @@ function getLabelsHtml(text, sender, ...staffNames) {
     //   <p>Best wishes,</p>
     //   <p>${sender}</p>
     // </div>`
-}
 
+
+function getLabelsHtml(text, sender, ...staffNames) {
+    //we dont need to create a new const variable labelsHtml because map will create new array and we can just return like this
+    return labelsHtml = staffNames.map(staffName =>
+        `<div class="label-card">
+      <p>Dear ${staffName.name} </p>
+      <p>${text}</p>
+      <p>Best wishes,</p>
+      <p>${sender}</p>
+    </div>`
+    ).join('')
+    // return labelsHtml;
+ 
+}
 const text = 'Thank you for all your hard work throughout the year! 🙏🎁'
 const sender = 'Tom'
 
